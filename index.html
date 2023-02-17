@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="fox.css">
+    <title>FOX RABBIT AND CARROT</title>
+
+
+</head>
+
+<body>
+<div id="flex-container">
+    <div style="flex-grow: 1" class="flex-start" id="start">
+
+
+        <img id="rabbit" width="100px" src="img/characters/Rabbit_Down.png">
+        <img id="fox" width="100px" src="img/characters/Fox_Down.png">
+        <img id="carrot" width="100px" src="img/characters/Carrot@2x.png">
+
+    </div>
+    <div style="flex-grow: 1" class="flex-farmer" id="farmer"><a href="#">
+        <img id="farmer" width="130px"
+           src="img/characters/Cat_Down.png"></a>
+    </div>
+    <div style="flex-grow: 7" class="flex-riever" id="boat"></div>
+    <div style="flex-grow: 1" class="flex-end" id="end"></div>
+</div>
+
+<script>
+    const fox = document.getElementById("fox");
+    const rabbit = document.getElementById("rabbit");
+    const farmer = document.getElementById("farmer");
+    const carrot = document.getElementById("carrot");
+
+
+    function charMovesToPlace(a, b, c) {
+        a.addEventListener("click", () => {
+            if (a.parentNode === b) {
+                // If the image is in div1, move it to div3
+                c.appendChild(a);
+                a.style.transform = "translate(0, 0)";
+            } else {
+                // If the image is in div3, move it back to div1
+                b.appendChild(a);
+                a.style.transform = "translate(0, 0)";
+            }
+        });
+    }
+
+    charMovesToPlace(fox, 'start', 'boat');
+
+
+</script>
+</body>
+
+</html>
