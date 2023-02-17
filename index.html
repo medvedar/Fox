@@ -18,12 +18,12 @@
         <img id="carrot" width="100px" src="img/characters/Carrot@2x.png">
 
     </div>
-    <div style="flex-grow: 1" class="flex-farmer" id="farmer"><a href="#">
+    <div style="flex-grow: 1" class="flex-farmer">
         <img id="farmer" width="130px"
-           src="img/characters/Cat_Down.png"></a>
+           src="img/characters/Cat_Down.png">
     </div>
-    <div style="flex-grow: 7" class="flex-riever" id="boat"></div>
-    <div style="flex-grow: 1" class="flex-end" id="end"></div>
+    <div  id="boat" style="flex-grow: 7" class="flex-riever"></div>
+    <div  id="end" style="flex-grow: 1" class="flex-end"></div>
 </div>
 
 <script>
@@ -31,6 +31,10 @@
     const rabbit = document.getElementById("rabbit");
     const farmer = document.getElementById("farmer");
     const carrot = document.getElementById("carrot");
+
+    const start = document.getElementById("start");
+    const boat = document.getElementById("boat");
+    const end = document.getElementById("end");
 
 
     function charMovesToPlace(a, b, c) {
@@ -47,7 +51,7 @@
         });
     }
 
-    charMovesToPlace(fox, 'start', 'boat');
+    charMovesToPlace(fox, start, boat);
 
 
 </script>
